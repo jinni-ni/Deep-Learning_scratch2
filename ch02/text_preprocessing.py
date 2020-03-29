@@ -1,4 +1,5 @@
 import numpy as np
+from common.util import preprocess
 
 text = "You say goodbye and I say hello"
 
@@ -25,3 +26,18 @@ print(word_to_id)
 
 print(id_to_word[1])
 print(word_to_id['hello'])
+
+corpus = [word_to_id[w] for w in words]
+corpus = np.array(corpus)
+print(corpus)
+
+
+
+# 함수로 구현
+
+
+text = "You say goodbye and I ay hello"
+corpus, word_to_id, id_to_word = preprocess(text)
+print("corpus : " + str(corpus))
+print("word_to_id : " + str(word_to_id))
+print("id_to_word : " + str(id_to_word))
