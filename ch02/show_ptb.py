@@ -30,5 +30,5 @@ querys = ['you', 'year', 'car', 'toyota']
 
 for query in querys:
     most_similar(query, word_to_id,id_to_word, wrod_vecs, top=5)
-    
+
 
